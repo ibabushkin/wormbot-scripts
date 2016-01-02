@@ -6,6 +6,12 @@ Evilzone IRC network (irc.evilzone.org)
 * Gathering all maintained scripts for wormbot
 * centralizing development of scripts
 
+## Notes and details
+* Some scripts are in binary form (notably `ud` and `randomfacts`)
+  * You can find their source code over at
+    * (https://github.com/Lenoch420/ud)
+    * (https://github.com/Lenoch420/randomfacts)
+
 ## Contributing
 Appreciated.
 
