@@ -1,2 +1,5 @@
 #!/bin/sh
-echo "luv you, $1"
+if [ ! -z $1 ]
+then
+	[ "$PREFIX" == "<" ] && echo "luv you, $@"
+fi
