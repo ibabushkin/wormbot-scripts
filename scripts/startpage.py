@@ -2,4 +2,5 @@
 # -*- coding: utf-8 -*-
 import sys
 
-print "https://www.startpage.com/do/search?q=", "+".join(sys.argv[1:])
+if len(sys.argv) > 1:
+    print("https://www.startpage.com/do/search?q=" + "+".join(sys.argv[1:]))

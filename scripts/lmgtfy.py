@@ -3,4 +3,5 @@
 
 from sys import argv
 
-print("http://lmgtfy.com/?q=" + "+".join(argv[1:]))
+if len(argv) > 1:
+    print("http://lmgtfy.com/?q=" + "+".join(argv[1:]))
