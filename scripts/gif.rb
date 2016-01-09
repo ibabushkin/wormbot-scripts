@@ -16,7 +16,6 @@ def grab_random_gif(query)
   end
 
   url = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=#{query}"
-  puts url
   source = open(url, &:read)
   parsed_source = JSON.parse(source)
 
