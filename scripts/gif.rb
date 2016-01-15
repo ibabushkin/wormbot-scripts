@@ -43,13 +43,18 @@ def grab_first_gif(query)
     puts parsed_source["data"][0]["images"]["fixed_height"]["url"]
   end
 end
+ 
+if ARGV[0].is_a? String
 
-if ARGV[0] == nil
-  puts "Usage is: gif [-r random] [argument]"
-end
+  if ARGV[0] == nil
+    puts "Usage is: gif [-r random] [argument]"
+  end
 
-if ARGV[0] == "-r"
-  grab_random_gif(ARGV)
+  if ARGV[0] == "-r"
+    grab_random_gif(ARGV)
+  else
+    grab_first_gif(ARGV)
+  end
 else
-  grab_first_gif(ARGV)
+  puts "Please enter a valid character."
 end
