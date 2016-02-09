@@ -3,3 +3,4 @@ if [ ! -z $1 ]
 then
 	[ "$PREFIX" == "<" ] && echo "luv you, $@"
 fi
+exit 0
