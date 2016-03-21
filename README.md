@@ -9,8 +9,8 @@ Evilzone IRC network (irc.evilzone.org)
 ## Notes and details
 * Some scripts are in binary form (notably `ud` and `randomfacts`)
   * You can find their source code over at
-    * https://github.com/Lenoch420/ud
-    * https://github.com/Lenoch420/randomfacts
+    * https://github.com/Lenoch420/ud - dead link (?), use https://github.com/ibabushkin/ud (forked) instead.
+    * https://github.com/Lenoch420/randomfacts - dead link (?), no link atm.
 
 ## Contributing
 Appreciated.
