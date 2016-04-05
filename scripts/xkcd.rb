@@ -1,10 +1,11 @@
+#!/usr/bin/env ruby
+
 #
 # Description: ruby module for wormbot allowing integration with xkcd.
 # Date: 05/04/2016
 # Author: https://github.com/phildk
 #
 
-#!/usr/bin/env ruby
 require 'json'
 require 'nokogiri'
 require 'open-uri'
