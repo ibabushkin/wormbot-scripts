@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import argparse
 import csv
 import os
 from os.path import sep as PATH_SEP
@@ -47,27 +46,22 @@ def is_valid_time_zone(tdb, timezone):
     return bool([tz for __, __, tz in tdb.timezones if tz == timezone])
 
 
-def main(args):
-    tdb = TimezoneDB("--API KEY HERE--")
-    if not is_valid_time_zone(tdb, args.time_zone):
+def main(time_zone):
+    tdb = TimezoneDB("--API KEY--")
+    if not is_valid_time_zone(tdb, time_zone):
         print "Error: Invalid time zone, check http://ezl.ink/0b for a list."
         return 0
 
-    json_data = tdb.lookup(args.time_zone)
+    json_data = tdb.lookup(time_zone)
     if json_data.get("status") == "FAIL":
         print json_data.get("message")
         return 0
 
-    print "Time and date in {}: {}".format(args.time_zone,
+    print "Time and date in {}: {}".format(time_zone,
                                            time.ctime(json_data.get("timestamp")))
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-z", "--time-zone", help="A valid zone name, see a list of zones in {}"\
-                                         .format(DATA_DIR + PATH_SEP + DATA_FILE),
-                    required=True)
-    args = ap.parse_args()
-
-    sys.exit(main(args))
+    if len(sys.argv) == 1:
+        sys.exit(main(sys.argv[1]))
 
