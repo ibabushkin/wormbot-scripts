@@ -24,13 +24,13 @@ class TimezoneDB(object):
         self.__api_key = api_key
         self.response_format = "json"
 
-    
+
     @property
     def timezones(self):
         with open(DATA_PATH) as csv_file:
             zones = csv.reader(csv_file, delimiter=",", quotechar="\"")
             return [row for row in zones if row]
-            
+
 
     def lookup(self, zone):
         """Looks up the timezone for the passed zone and returns it's results as json."""
@@ -62,6 +62,6 @@ def main(time_zone):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 2:
         sys.exit(main(sys.argv[1]))
 
